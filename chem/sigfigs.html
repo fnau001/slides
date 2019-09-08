@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<!--Title of webpage-->
+		<title>Significant Figures and Uncertainty</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--Some mods for titles with BG colors-->
+		<style>
+			#title_slide {
+				color:rgb(255, 254, 254);
+				text-shadow: 
+				-1.5px -1.5px 0 #000,
+				1.5px -1.5px 0 #000,
+				-1.5px 1.5px 0 #000,
+				1.5px 1.5px 0 #000;
+			}
+			#title_bg .backgrounds{
+				-webkit-filter: blur(20px);
+				-moz-filter: blur(20px);
+				-o-filter: blur(20px);
+				-ms-filter: blur(20px);
+				filter: blur(20px);
+ 			}
+			#vocabulary {
+				text-align: left;
+			}
+			#vocabulary strong{
+				text-decoration: underline;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="title_bg" data-background="images/unit_1/sigfigs/title.jpg">
+					<span class="menu-title" style="display: none">Title Slide</span>
+					<h1 id="title_slide">Significant Figures</h1><!--Topic Title-->
+					<h3 id="title_slide">Measurements: Precision and Uncertainty</h3><!--Subtitle-->
+					<p id="title_slide">
+						<small>Chemistry and Physics<br>Mr. Nau</small>
+					</p>
+				</section>
+
+
+			<!--Intro-->
+				<section>
+					<!-- Custom menu title -->
+					<span class="menu-title" style="display: none">Precision versus Accuracy</span>
+					<h2>Precision versus Accuracy</h2>
+					<p id="vocabulary">
+						<strong>Precision</strong> 
+						refers to the closeness of 
+						two or more measurements to each other.<br>
+						<strong>Accuracy</strong> 
+						refers to the closeness of a measured value to a standard or
+						<em>known</em> value.
+					</p>
+					<img src="images/unit_1/sigfigs/pva.png" alt="precision-accuracy">
+				</section>
+
+
+				<section>
+					<span class="menu-title" style="display: none">Definition - Significant Figures</span>
+					<h2>Definition</h2>
+					<p id="vocabulary">
+						<strong>Significant Figures</strong>
+						 are the <em>significant</em> digits reported following a measurement or calculation.
+					</p>
+				</section>
+
+				<!--Real world example or "Why" section-->
+				<section>
+					<span class="menu-title" style="display: none">Purpose</span>
+					<h2>Why do we need significant figures?</h2>
+					<p>
+						For the following reasons, <br>
+						<b>all measurements are <em>inherently</em> inaccurate:</b>
+						<ul>
+							<li class="fragment fade-right">Limited precision of measuring device</li>
+							<li class="fragment fade-right">Human error</li>
+							<li class="fragment fade-right">Faulty technique</li>
+						</ul>
+					</p>
+					<p class="fragment fade-right">
+						Therefore, reported values obtained from measurements must convey <b>precision</b>
+						and the degree of <b>uncertainty</b>.
+					</p>
+				</section>
+
+				<!-- Video Example -->
+				<section>
+					<h2>Example</h2>
+					<p>Often times in sports, the difference between a win and a loss is determined within a hundredth of a second.</p>
+					<img src="images/unit_1/sigfigs/swimex.jpg">
+				</section>
+
+				<!-- iframe background -->
+				<section data-background-iframe="https://www.youtube.com/embed/2vK8iJgISXY?start=90" data-background-interactive>
+					<h2 class="fragment fade-in-then-out">Michael Phelps sets world record</h2>
+					<h3 class="fragment fade-in">1:51:51 seconds</h3>
+				</section>
+
+				<!--Examples and applications-->
+				<section>
+					<span class="menu-title" style="display: none">Significant Figures</span>
+					<h2>Significant figures</h2>
+					<p style="text-align: left">Significant figures include all of the digits in a measurment that
+						are known <b>precisely</b>, plus one last digit that is considered an <em>estimation</em>.
+					</p>
+					<img src="images/unit_1/sigfigs/inst.png" class="fragment fade-right" alt="inst" style="height:45%;width: 45%;">
+					
+					
+				</section>
+
+				<section>
+					<h2>Rules for zeros</h2>
+					<p><b>Non-zeros are always significant.</b></p>
+					<p>
+						<p class="fragment fade-out" data-fragment-index="1">103.23002</p>
+						<p class="fragment fade-in" data-fragment-index="1">
+							<strong class="fragment highlight-red" data-fragment-index="1">1</strong>0<strong class="fragment highlight-red" data-fragment-index="1">3</strong>.<strong class="fragment highlight-red" data-fragment-index="1">23</strong>00<strong class="fragment highlight-red" data-fragment-index="1">2</strong>
+						</p>
+					</p>
+					<p class="fragment fade-up">
+						Therefore, the following rules are used to determine whether or 
+						not a zero should be counted as significant.
+					</p>
+				</section>
+				<section>
+					<h2>Rule 1: Trailing zeros</h2>
+					<p>All trailing zeros <b>after</b> a decimal point are significant</p>
+					<p class="fragment" style="text-align: left">12.74<strong class="fragment highlight-red" data-fragment-index="1">0</strong>    <p class="fragment" style="text-align: right">All five numbers are significant</p></p>
+					<p class="fragment" style="text-align: left">0.0042<strong class="fragment highlight-red" data-fragment-index="1">0</strong>    <p class="fragment" style="text-align: right">Three sig figs, 4, 2 and 0</p></p>
+					<p class="fragment" style="text-align: left">25<b>00</b>   <p class="fragment" style="text-align: right">These zeros are <b>not significant!</b> (no decimal = low precision)</p></p>
+				</section>
+				
+				<section>
+
+					<h2>Rule 2: "Sandwiched Zeros"</h2>
+					<p>Zeros between two other significant digits are also significant</p>
+					<ul>
+						<li class="fragment fade-out">10.0<li class="fragment">1<strong  class="fragment highlight-red" data-fragment-index="1">0</strong>.0 three total</li></li>
+						<li class="fragment fade-out">2004<li class="fragment">2<strong  class="fragment highlight-red" data-fragment-index="1">00</strong>4 four total</li></li>
+						<li class="fragment fade-out">6.000<li class="fragment">6.<strong class="fragment highlight-red" data-fragment-index="1">00</strong>0 four total</li></li>
+					</ul>	
+				</section>
+
+				<section>
+					<h2>Rule 3: Leading Zeros</h2>
+					<p>Zeros used only for spacing the decimal point are <b>not significant</b>.</p>
+					<p><b>0.0000</b><strong class="fragment highlight-red" data-fragment-index="1">23</strong></p>
+					<p class="fragment" data-fragment-index="1">Only the last two digits in this example are <strong style="color:red">significant</strong></p>
+				</section>
+
+				<!-- Check for Understanding -->
+				<section data-menu-title="Check for understanding" data-transition="zoom">
+						<script data-quiz>
+								quiz = {
+										"info": {
+												"name":    "Check for understanding",
+												"main":    "Count the number of significant figures",
+												"level1":  "NICE",
+												"level2":  "Almost!, keep trying!",
+												"level3":  "Not too bad...",
+												"level4":  "Not bad, but not good either",
+												"level5":  "Yikes. Please try again." // no comma here
+										},
+										"questions": [
+												{ // Question 1 - Multiple Choice, Single True Answer
+														"q": "0.00140 seconds",
+														"a": [
+																{"option": "5",      "correct": false},
+																{"option": "2",     "correct": false},
+																{"option": "3",      "correct": true},
+																{"option": "6",     "correct": false} // no comma here
+														],
+														"correct": "<p><span>That's right!</span> The leading zeros are <b>not</b> significant. Only 1,4, and the last 0. For this example, leaving out the last three would leave you with just 0, which is not accurate.</p>",
+														"incorrect": "<p><span>Incorrect.</span> The leading zeros are <b>not</b> significant. Only 1,4, and the last 0. For this example, leaving out the last three would leave you with just 0, which is not accurate.</p>" // no comma here
+												},
+												{ // Question 2 - Multiple Choice, Single True Answer
+														"q": "200 meters",
+														"a": [
+																{"option": "1",      "correct": true},
+																{"option": "2",     "correct": false},
+																{"option": "3",      "correct": false},
+																{"option": "None",     "correct": false} // no comma here
+														],
+														"correct": "<p><span>That's right!</span> Zeros before a decimal are not significant unless they're in between two non-zeros</p>",
+														"incorrect": "<p><span>Incorrect.</span> Only the first digit (2) is considered significant.</p>" // no comma here
+												},
+												// more questions here
+										]
+								}
+							</script>			
+				</section>
+
+				<section data-menu-title="Rules for Math Operations">
+					<h1>Rules for math operations</h1>
+					<p>"A chain is no stronger than its weakest link"</p>
+					<p style="text-align: left" class="fragment fade-in">
+						An answer is no more precise than the <em>least</em> precise number used to get the answer...
+					</p>
+					<p style="text-align: left" class="fragment fade-in">Your answer <strong style="color:red">cannot</strong> be MORE precise than the <em>least</em> precise measurement.</p>
+				</section>
+
+				<section>
+					<h2>Addition and Subtraction</h2>
+
+				</section>
+
+				<section>
+					<h2>Division and Multiplication</h2>
+
+				</section>
+
+				<!-- Classwork or Homework problems explained-->
+				<section>
+					<h1>Classwork problems</h1>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/menu/menu.js', async: true},
+					{ src: 'plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({}); } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
