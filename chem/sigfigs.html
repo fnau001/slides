@@ -48,6 +48,12 @@
 				-ms-filter: blur(20px);
 				filter: blur(20px);
  			}
+			 .fragment.visible:not(.current-fragment) {
+				display: none;
+				height:0px;
+				line-height: 0px;
+				font-size: 0px;
+			}
 			#vocabulary {
 				text-align: left;
 			}
@@ -191,7 +197,7 @@
 				</section>
 
 				<!-- Check for Understanding -->
-				<section data-menu-title="Check for understanding" data-transition="zoom">
+				<section data-menu-title="Check for understanding - Counting sig figs" data-transition="zoom">
 						<script data-quiz>
 								quiz = {
 										"info": {
@@ -243,18 +249,118 @@
 
 				<section>
 					<h2>Addition and Subtraction</h2>
+					<p style="text-align: left">The number of digits <b>after</b> the decimal point in the sum or difference of two or 
+						more measurements cannot be greater than that of the measurement with the <em>fewest</em> 
+						digits after its decimal point.
+					</p>
+					<p class="fragment fade-in">Example: 25.0 + 1 = 26</p>
+					<p class="fragment fade-in">Although 25.0 is reported to the first decimal point, 1 contains no decimal and therefore the final answer must also be reported
+						 without a decimal.
+					</p>
+				</section>
 
+				<!-- Check for Understanding -->
+				<section data-menu-title="CFU -  Addition and Subtraction" data-transition="zoom">
+						<script data-quiz>
+								quiz = {
+										"info": {
+												"name":    "CFU - Addition and Subtraction",
+												"main":    "Determine the correct answer for each operation",
+												"level1":  "NICE",
+												"level2":  "Almost!, keep trying!",
+												"level3":  "Not too bad...",
+												"level4":  "Not bad, but not good either",
+												"level5":  "Yikes. Please try again." // no comma here
+										},
+										"questions": [
+												{ // Question 1 - Multiple Choice, Single True Answer
+														"q": "250 - 50.00 = ",
+														"a": [
+																{"option": "50.0",      "correct": false},
+																{"option": "200.00",     "correct": false},
+																{"option": "200",      "correct": true},
+																{"option": "200.0",     "correct": false} // no comma here
+														],
+														"correct": "<p><span>That's right!</span> Since 250 doesn't contain any numbers after the decimal, the final answer must be reported as 200</p>",
+														"incorrect": "<p><span>Incorrect.</span> The final answer must contain the same amount of digits after the decimal as the <em>least</em> precise starting value. </p>" // no comma here
+												},
+												{ // Question 2 - Multiple Choice, Single True Answer
+														"q": "5.50 + 10.0 = ",
+														"a": [
+																{"option": "15.5",      "correct": true},
+																{"option": "15.0",     "correct": false},
+																{"option": "15",      "correct": false},
+																{"option": "1.55 x 10<sup>2</sup>",     "correct": false} // no comma here
+														],
+														"correct": "<p><span>That's right!</span>Since 10.0 is only reported to the first decimal place, our final answer must also be reported to the first decimal place</p>",
+														"incorrect": "<p><span>Incorrect.</span> The answer is 15.5. Since 10.0 is only reported to the first decimal place, our final answer must also be reported to the first decimal place</p>" // no comma here
+												},
+												// more questions here
+										]
+								}
+							</script>			
 				</section>
 
 				<section>
 					<h2>Division and Multiplication</h2>
+					<p style="text-align: left">The number of significant figures in the product or quotient
+						 of two or more measurements cannot be greater than that of the measurement with the <em>fewest</em> significant figures.
+					</p>
+					<p class="fragment fade-in">Example: 25.0 x 1.0 = 25</p>
+					<p class="fragment fade-in">Although 25.0 contains <b>three</b> significant figures, 1.0 only contains <b>two</b>. Therefore the final answer must also contain just two significant
+						figures.
+					</p>
 
+				</section>
+
+				<!-- Check for Understanding -->
+				<section data-menu-title="CFU -  Multiplication and Division" data-transition="zoom">
+						<script data-quiz>
+								quiz = {
+										"info": {
+												"name":    "CFU - Multiplication and Division",
+												"main":    "Determine the correct answer for each operation",
+												"level1":  "NICE",
+												"level2":  "Almost!, keep trying!",
+												"level3":  "Not too bad...",
+												"level4":  "Not bad, but not good either",
+												"level5":  "Yikes. Please try again." // no comma here
+										},
+										"questions": [
+												{ // Question 1 - Multiple Choice, Single True Answer
+														"q": "9.0 x 12 = ",
+														"a": [
+																{"option": "108.0",      "correct": false},
+																{"option": "84",     "correct": false},
+																{"option": "1.1 x 10<sup>2</sup>",      "correct": true},
+																{"option": "10.8 x 10<sup>1</sup>",     "correct": false} // no comma here
+														],
+														"correct": "<p><span>That's right!</span> Well done, this question was meant to be tricky</p>",
+														"incorrect": "<p><span>Incorrect.</span> Multiplying 9.0 by 12 would yield 108, but reporting this value using just 2 sig figs would yield 1.1 x 10<sup>2</sup></p>" // no comma here
+												},
+												// more questions here
+										]
+								}
+							</script>			
 				</section>
 
 				<!-- Classwork or Homework problems explained-->
+
 				<section>
-					<h1>Classwork problems</h1>
+					<h2>Summary</h2>
+				
+						<img src="images/unit_1/sigfigs/summary1.png" class="fragment" data-fragment-index="1">
+						<img src="images/unit_1/sigfigs/summary2.png" class="fragment" data-fragment-index="2">
+						<img src="images/unit_1/sigfigs/summary3.png" class="fragment" data-fragment-index="3">
+						<img src="images/unit_1/sigfigs/summary4.png" class="fragment" data-fragment-index="4">
+				
 				</section>
+
+				<section>
+					<h2>Practice Problems</h2>
+					<img src="images/unit_1/sigfigs/practice.png">
+				</section>
+				
 			</div>
 
 		</div>
